@@ -52,3 +52,7 @@ FILES_${PN} += "${libdir}/GConf/* \
 FILES_${PN}-dev += "${datadir}/sgml/gconf/gconf-1.0.dtd"
 
 BBCLASSEXTEND = "native"
+
+do_compile_prepend() {
+    export GIR_EXTRA_LIBS_PATH="${B}/gconf/.libs"
+}

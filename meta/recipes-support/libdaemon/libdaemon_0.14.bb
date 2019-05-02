@@ -15,4 +15,4 @@ SRC_URI[sha256sum] = "fd23eb5f6f986dcc7e708307355ba3289abe03cc381fc47a80bca4a50a
 
 inherit autotools pkgconfig
 
-EXTRA_OECONF = "--disable-lynx"
+EXTRA_OECONF = "--disable-lynx ac_cv_func_setpgrp_void=yes"

@@ -121,6 +121,9 @@ def package_qa_get_machine_dict(d):
                         "microblazeel":(189,     0,    0,          True,          32),
                         "sh4":        (  42,     0,    0,          True,          32),
                       },
+            "linux-uclibceabi" : {
+                        "arm" :       (  40,    97,    0,          True,          32),
+                      },
             "uclinux-uclibc" : {
                         "bfin":       ( 106,     0,    0,          True,         32),
                       }, 

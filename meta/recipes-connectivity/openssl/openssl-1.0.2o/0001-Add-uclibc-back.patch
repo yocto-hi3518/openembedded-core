@@ -1,0 +1,24 @@
+From 23d1a6381b0d208be18a060e30e0593cf8f151c4 Mon Sep 17 00:00:00 2001
+From: Sean Kelly <sean.kelly@aviatnet.com>
+Date: Fri, 3 May 2019 02:27:24 +0000
+Subject: [PATCH] Add uclibc back
+
+---
+ Configure | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Configure b/Configure
+index 518bba7..de16a75 100755
+--- a/Configure
++++ b/Configure
+@@ -531,6 +531,7 @@ my %table=(
+ "linux-gnueabi-armeb","$ENV{'CC'}:-DB_ENDIAN -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:BN_LLONG DES_RISC1:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ "linux-musleabi-arm","$ENV{'CC'}:-DL_ENDIAN -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:BN_LLONG DES_RISC1:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ "linux-musleabi-armeb","$ENV{'CC'}:-DB_ENDIAN -O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:BN_LLONG DES_RISC1:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++"linux-uclibceabi-arm","$ENV{'CC'}:-DL_ENDIAN 	 -DTERMIO  -O2 -pipe -g -feliminate-unused-debug-types -fdebug-prefix-map=/home/sekelly/git/github/yocto-hi3518/build_hi3518/tmp-uclibc-uclibc/work/armv5e-oe-linux-uclibceabi/openssl/1.0.2o-r0=/usr/src/debug/openssl/1.0.2o-r0 -fdebug-prefix-map=/home/sekelly/git/github/yocto-hi3518/build_hi3518/tmp-uclibc-uclibc/work/armv5e-oe-linux-uclibceabi/openssl/1.0.2o-r0/recipe-sysroot-native= -fdebug-prefix-map=/home/sekelly/git/github/yocto-hi3518/build_hi3518/tmp-uclibc-uclibc/work/armv5e-oe-linux-uclibceabi/openssl/1.0.2o-r0/recipe-sysroot=  -Wall -Wa,--noexecstack -DHAVE_CRYPTODEV -DUSE_CRYPTODEV_DIGESTS::-D_REENTRANT::-ldl:BN_LLONG DES_RISC1:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
+ 
+ "linux-avr32","$ENV{'CC'}:-O3 -fomit-frame-pointer -Wall::-D_REENTRANT::-ldl:BN_LLONG DES_RISC1:${no_asm}:dlfcn:linux-shared:-fPIC::.so.\$(SHLIB_MAJOR).",
+ 
+-- 
+2.7.4
+

@@ -85,6 +85,8 @@ CPPFLAGS_append_class-target_mips16e = " -DNVALGRIND=1"
 
 USE_NLS = "yes"
 
+CFLAGS_append = " -Wno-error=format-nonliteral "
+
 do_install_append () {
 	if [ -f ${D}${bindir}/gtester-report ]; then
 		sed ${D}${bindir}/gtester-report -i -e '1s|^#!.*|#!/usr/bin/env python3|'
